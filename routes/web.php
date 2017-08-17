@@ -19,3 +19,15 @@ Route::get('/', function () {
 /*===============
 =====CDG=========
 =================*/
+
+/*===============
+======FRONT======
+=================*/
+
+Route::get('clubdegorras/home', 'HomeController@show');
+
+
+/*------------------------------------------*/
+Auth::routes();
+
+Route::get('home', 'HomeController@index')->name('home');
