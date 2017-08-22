@@ -12,19 +12,20 @@
 </head>
 <body>
 <h1>Products</h1>
-<h4>{{ $products->title }}</h4>
-
-<ul>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>Preguntas</th>
+    </tr>
+    </thead>
+    <tbody>
     @foreach($products as $product)
-        <li><a href="/front/index/{{ $products->id }}">{{ $product->text }}</a></li>
-            <ul>
-                @if(!stock->quantity > 0)
-                    <p>¡No hay stock!</p>
-                @else
-                <p>¡En stock!</p>
-                @endif
-            </ul>
+        <tr>
+            <td><a href="/admin/products/{{$product->id}}">{{ $product->text}}</a></td>
+        </tr>
     @endforeach
-</ul>
+    </tbody>
+</table>
+<button class="btn btn-primary"><a href="/admin/products/create">Create product</a></button>
 </body>
 </html>

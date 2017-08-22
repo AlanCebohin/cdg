@@ -24,8 +24,7 @@ class HomeController extends Controller
     public function show()
     {
     	$products = Products::all();
-    	$products_variants = Variants::all();
     	$stock = Stock::all();
-        return view('front.index', ["products" => $products, "products_variants" => $products_variants, "stock" => $stock]);
+        return view('front.index', ["products" => $products, "stock" => $stock]);
     }
 }

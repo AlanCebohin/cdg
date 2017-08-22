@@ -25,6 +25,14 @@ Route::get('/', function () {
 =================*/
 
 Route::get('clubdegorras/home', 'HomeController@show');
+Route::get('clubdegorras/products', 'ProductsController@show');
+
+/*===============
+======ADMIN======
+===============*/
+Route::get('admin/products', 'Admin\ProductsController@show');
+Route::get('admin/products/create', 'Admin\ProductsController@create');
+
 
 
 /*------------------------------------------*/
