@@ -35,11 +35,14 @@ Route::get('admin/products/create', 'Admin\ProductsController@create');
 Route::post('admin/products/create', 'Admin\ProductsController@store');
 Route::get('admin/products/{id}', 'Admin\ProductsController@show');
 //------STOCK----
-Route::get('admin/stock/{id}', 'Admin\StockController@update');
+
+Route::get('admin/stocks/{id}', 'Admin\StocksController@update');
+Route::post('admin/stocks/create', 'Admin\StocksController@create');
+Route::get('admin/stocks/create', 'Admin\StocksController@store');
 
 
 
-/*------------------------------------------*/
+//------------------------------------------------------
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');

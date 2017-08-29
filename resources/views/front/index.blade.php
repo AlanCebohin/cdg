@@ -18,10 +18,10 @@
     @foreach($products as $product)
         <li><a href="/front/index/{{ $products->id }}">{{ $product->text }}</a></li>
             <ul>
-                @if(!stock->quantity > 0)
-                    <p>¡No hay stock!</p>
+                @if(stock->quantity > 0)
+                    <p>¡En hay stock!</p>
                 @else
-                <p>¡En stock!</p>
+                <p>¡No hay stock!</p>
                 @endif
             </ul>
     @endforeach

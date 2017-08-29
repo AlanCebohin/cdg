@@ -24,10 +24,10 @@
                 @endforeach
 
                 <ul>
-                @if(!stock->quantity > 0)
-                    <p>¡No hay stock!</p>
-                @else
+                @if(stock->quantity > 0)
                     <p>¡En stock!</p>
+                @else
+                    <p>¡No hay stock!</p>
                 @endif
                 </ul>          
             </ul>
