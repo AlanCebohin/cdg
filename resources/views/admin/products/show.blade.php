@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Películas</title>
+	<title>Products</title>
 	<style type="text/css">
 		body {
 			padding: 30px

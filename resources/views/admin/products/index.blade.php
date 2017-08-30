@@ -26,6 +26,7 @@
     @endforeach
     </tbody>
 </table>
+{{ $questions->links() }}
 <button class="btn btn-primary"><a href="/admin/products/create">Create product</a></button>
 </body>
 </html>

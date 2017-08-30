@@ -28,5 +28,6 @@ class StocksController extends Controller
 		$stock = App\Stock::find($id);
         $stock->quantity = $request->quantity;
         $stock->save;
+        return view ('admin.stocks.update', compact("stock"));
     }
 }

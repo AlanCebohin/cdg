@@ -34,6 +34,8 @@
                         <label for="created_by">Created By</label>
                         <input type="text" name="created_by" id="created_by" class="form-control">
                     </div>
+                    <button id="submit" class="buttonRegistro" align="center" type="submit">Submit</button>
+                    <button class="buttonRegistro" type="reset">Delete</button>
             </div>
                 </form>
             </div>

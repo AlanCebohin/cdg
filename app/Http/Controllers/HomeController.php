@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-    	$products = Products::all();
+    	$products = Product::all();
     	$stock = Stock::all();
         return view('front.index', compact('products', 'stock'));
     }

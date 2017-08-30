@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Edit Stock</title>
+</head>
+<body>
+    @if(count($errors))
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <p>{{ $error }}</p>
+            @endforeach
+        </div>
+    @endif
+    <div>
+        <h1>Edit Stock by Product Variant Id</h1>
+        <form action="/admin/stocks/{id}update" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
+        <label for="product_variant_id">Product Variant Id</label>
+        <input type="text" name="product_variant_id" placeholder= "product_variant_id" value="{{ $stock->product_variant_id }}" required id="product_variant_id">
+        <br>
+        <label for="quantity">Quantity</label>
+        <input type="text" name="quantity" placeholder= "Quantity" value="{{ $stock->quantity }}" required id="quantity">
+        <br>
+        <button id="submit" class="buttonRegistro" align="center" type="submit">Submit</button>
+    </form>
+    <button class="buttonRegistro"><a href="/admin/stocks/{{$stock->id}}">Cancel</a></button>
+
+</div>
+
+</body>
+</html>

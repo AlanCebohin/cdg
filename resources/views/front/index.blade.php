@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+<a href="/register">Register</a>
 <h1>Products</h1>
 <h4>{{ $products->title }}</h4>
 
